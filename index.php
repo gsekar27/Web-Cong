@@ -925,7 +925,7 @@
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="fav-tab-content">
-                                        <!---Fav legislator--->
+                                        <!--Fav legislator-->
                                         <div role="tabpanel" id="fav-leg" class="tab-pane active">
                                             <div id="fav-tab-data" class="panel panel-default">
                                                 <div id="fav-tab-header" class="well">
@@ -972,7 +972,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!---Fav legislator--->
+                                        <!--Fav legislator-->
                                         <!--Fav bills-->
                                         <div role="tabpanel" id="fav-bill" class="tab-pane">
                                             <div id="fav-tab-data" class="panel panel-default">
@@ -1290,22 +1290,22 @@
                                             <object width="100%" height="500px" data="{{viewDetailsBillRowData.last_version.urls.pdf}} "></object>
                                         </div>
                                     </div>
-                                    <!-- /#Bill View Details Content -->
+                                    <!--Bill View Details Content -->
                                 </div>
-                                <!-- /#Bill View Details -->
-                                <!-- /#Bill View Details -->
+                                <!-- Bill View Details -->
+                                <!-- Bill View Details -->
                             </div>
                         </div>
-                        <!-- /#caraousel content -->
+                        <!--caraousel content -->
                     </div>
-                    <!---Favorites-->
+                    <!--Favorites-->
                 </div>
             </div>
             <!-- main content container -->
         </div>
-        <!-- /#page-content-->
+        <!-- page-content-->
     </div>
-    <!-- /#Main Content -->
+    <!-- Main Content -->
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
