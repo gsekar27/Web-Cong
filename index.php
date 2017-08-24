@@ -550,9 +550,7 @@
 
                                                                 <td>{{bill_item.bill_id| uppercase}}</td>
 
-
                                                                 <td>{{ bill_item.bill_type| uppercase}}</td>
-
 
                                                                 <td>{{ bill_item.official_title }}</td>
 
@@ -653,15 +651,15 @@
                                     <!-- /#Bill View Details Content -->
                                     <div id="bill-view-details-content">
                                         <div id="bill-vd-content" class="col-sm-6 col-md-6 col-lg-6 table-responsive">
-                                            <table  class="table" height="500px">
+                                            <table class="table" height="500px">
                                                 <tbody>
                                                     <tr>
-                                                        <th class="col-md-1 col-lg-1" >{{ 'Bill ID '}}</th>
+                                                        <th class="col-md-1 col-lg-1">{{ 'Bill ID '}}</th>
                                                         <td class="col-md-5 col-lg-5">{{ viewDetailsBillRowData.bill_id| uppercase }}</td>
                                                     </tr>
                                                     <tr>
-                                                      <th class="col-md-1 col-lg-1">{{ 'Title '}}</th>
-                                                      <td class="col-md-5 col-lg-5">{{ viewDetailsBillRowData.official_title }}</td>
+                                                        <th class="col-md-1 col-lg-1">{{ 'Title '}}</th>
+                                                        <td class="col-md-5 col-lg-5">{{ viewDetailsBillRowData.official_title }}</td>
                                                     </tr>
                                                     <tr>
                                                         <th class="col-md-1 col-lg-1">{{ 'Bill Type '}}</th>
@@ -701,7 +699,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <div class="col-md-6 col-lg-6" id = "bill-vd-pdf">
+                                        <div class="col-md-6 col-lg-6" id="bill-vd-pdf">
                                             <object width="100%" height="500px" data="{{viewDetailsBillRowData.last_version.urls.pdf}} "></object>
                                         </div>
                                     </div>
@@ -816,29 +814,29 @@
                                                         <thead>
                                                             <div class="row">
                                                                 <tr>
-                                                                  <th class = "col-sm-1 col-md-1 col-lg-1"></th>
-                                                                  <th class = "col-sm-1 col-md-1 col-lg-1">Chamber</th>
-                                                                  <th class = "col-sm-1 col-md-1 col-lg-1">Committee ID</th>
-                                                                  <th class = "col-sm-8 col-md-8 col-lg-8">Name</th>
-                                                                  <th class = "col-sm-1 col-md-1 col-lg-1">Parent Committee</th>
+                                                                    <th class="col-sm-1 col-md-1 col-lg-1"></th>
+                                                                    <th class="col-sm-1 col-md-1 col-lg-1">Chamber</th>
+                                                                    <th class="col-sm-1 col-md-1 col-lg-1">Committee ID</th>
+                                                                    <th class="col-sm-8 col-md-8 col-lg-8">Name</th>
+                                                                    <th class="col-sm-1 col-md-1 col-lg-1">Parent Committee</th>
                                                                 </tr>
                                                             </div>
                                                         </thead>
                                                         <tbody>
                                                             <div>
                                                                 <tr dir-paginate="item in commDataSenate| orderBy:'committee_id'|filter:comm_searchSenate|itemsPerPage:10" pagination-id="comm-pg-senate">
-                                                                        <td>
-                                                                            <button id="btn-comm-fav" ng-click="FavComm(item,$index)" class="btn btn-info btn-responsive btn-fav">
-                                                                              <i ng-if="IsFavComm(item)" class="fa fa-star fa-lg" style="color:yellow" aria-hidden="true"></i>
-                                                                              <i ng-if = "!IsFavComm(item)" class="fa fa-star-o fa-lg"  style="color:grey"aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </td>
-                                                                        <td>
-                                                                            <img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}">{{item.chamber.substring(0,1).toUpperCase()+item.chamber.substring(1)}}
-                                                                        </td>
-                                                                        <td>{{item.committee_id|uppercase}}</td>
-                                                                        <td>{{item.name}}</td>
-                                                                        <td>{{item.parent_committee_id|uppercase}}</td>
+                                                                    <td>
+                                                                        <button id="btn-comm-fav" ng-click="FavComm(item,$index)" class="btn btn-info btn-responsive btn-fav">
+                                                                            <i ng-if="IsFavComm(item)" class="fa fa-star fa-lg" style="color:yellow" aria-hidden="true"></i>
+                                                                            <i ng-if="!IsFavComm(item)" class="fa fa-star-o fa-lg" style="color:grey" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </td>
+                                                                    <td>
+                                                                        <img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}">{{item.chamber.substring(0,1).toUpperCase()+item.chamber.substring(1)}}
+                                                                    </td>
+                                                                    <td>{{item.committee_id|uppercase}}</td>
+                                                                    <td>{{item.name}}</td>
+                                                                    <td>{{item.parent_committee_id|uppercase}}</td>
                                                             </div>
                                                         </tbody>
                                                     </table>
@@ -865,28 +863,28 @@
                                                 <div id="comm-main-table" class="col-12 col-sm-12 col-lg-12 table-responsive">
                                                     <table class="table table-hover">
                                                         <thead>
-                                                                <tr>
-                                                                  <th class = "col-sm-1 col-md-1 col-lg-1"></th>
-                                                                  <th class = "col-sm-1 col-md-1 col-lg-1">Chamber</th>
-                                                                  <th class = "col-sm-2 col-md-2 col-lg-2">Committee ID</th>
-                                                                  <th class = "col-sm-8 col-md-8 col-lg-8">Name</th>
-                                                                </tr>
+                                                            <tr>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1"></th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Chamber</th>
+                                                                <th class="col-sm-2 col-md-2 col-lg-2">Committee ID</th>
+                                                                <th class="col-sm-8 col-md-8 col-lg-8">Name</th>
+                                                            </tr>
 
                                                         </thead>
                                                         <tbody>
                                                             <div>
                                                                 <tr dir-paginate="item in commDataJoint| orderBy:'committee_id'|filter: comm_searchJoint|itemsPerPage:10" pagination-id="comm-pg-joint">
-                                                                        <td>
-                                                                            <button id="btn-comm-fav" ng-click="FavComm(item,$index)" class="btn btn-info btn-responsive btn-fav">
-                                                                              <i ng-if="IsFavComm(item)" class="fa fa-star fa-lg" style="color:yellow" aria-hidden="true"></i>
-                                                                              <i ng-if = "!IsFavComm(item)" class="fa fa-star-o fa-lg"  style="color:grey"aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </td>
-                                                                        <td>
-                                                                            <img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}">{{item.chamber.substring(0,1).toUpperCase()+item.chamber.substring(1)}}
-                                                                        </td>
-                                                                        <td>{{item.committee_id|uppercase}}</td>
-                                                                        <td>{{item.name}}</td>
+                                                                    <td>
+                                                                        <button id="btn-comm-fav" ng-click="FavComm(item,$index)" class="btn btn-info btn-responsive btn-fav">
+                                                                            <i ng-if="IsFavComm(item)" class="fa fa-star fa-lg" style="color:yellow" aria-hidden="true"></i>
+                                                                            <i ng-if="!IsFavComm(item)" class="fa fa-star-o fa-lg" style="color:grey" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </td>
+                                                                    <td>
+                                                                        <img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}">{{item.chamber.substring(0,1).toUpperCase()+item.chamber.substring(1)}}
+                                                                    </td>
+                                                                    <td>{{item.committee_id|uppercase}}</td>
+                                                                    <td>{{item.name}}</td>
                                                                 </tr>
                                                             </div>
                                                         </tbody>
@@ -935,38 +933,38 @@
                                                 <div id="fav-main-table" class="col-12 col-sm-12 col-lg-12 table-responsive">
                                                     <table class="table table-hover">
                                                         <thead>
-                                                                <tr>
-                                                                        <th class="col-sm-1 col-md-1 col-lg-1"></th>
-                                                                        <th class="col-sm-1 col-md-1 col-lg-1">Image</th>
-                                                                        <th class="col-sm-1 col-md-1 col-lg-1">Party</th>
-                                                                        <th class="col-sm-2 col-md-2 col-lg-2">Name</th>
-                                                                        <th class="col-sm-1 col-md-1 col-lg-1">Chamber</th>
-                                                                        <th class="col-sm-1 col-md-1 col-lg-1">State</th>
-                                                                        <th class="col-sm-3 col-md-3 col-lg-3">Email</th>
-                                                                        <th class="col-sm-2 col-md-2 col-lg-2"></th>
-                                                                </tr>
+                                                            <tr>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1"></th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Image</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Party</th>
+                                                                <th class="col-sm-2 col-md-2 col-lg-2">Name</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Chamber</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">State</th>
+                                                                <th class="col-sm-3 col-md-3 col-lg-3">Email</th>
+                                                                <th class="col-sm-2 col-md-2 col-lg-2"></th>
+                                                            </tr>
                                                         </thead>
                                                         <tbody>
-                                                                <tr ng-repeat="item in fav_leg|orderBy: ['state_name','last_name']">
-                                                                        <td>
-                                                                            <button ng-click="legDeleteItem(item)" class="btn btn-info btn-responsive btn-fav btn-del">
-                                                                                <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </td>
-                                                                        <td><img class="leg-img" src="https://theunitedstates.io/images/congress/original/{{item.bioguide_id + '.jpg' }}">
-                                                                        </td>
-                                                                        <td><img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.party == 'R'?'r.png':'d.png'}}">
-                                                                        </td>
-                                                                        <td>{{ item.last_name + ', ' + item.first_name }}</td>
-                                                                        <td><img class="leg-img-mem" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}">{{item.chamber.substring(0,1).toUpperCase()+item.chamber.substring(1)}}</td>
-                                                                        <td>{{item.state_name}}</td>
-                                                                        <td><a href="mailto:{{item.oc_email}}">{{item.oc_email}}</a></td>
-                                                                        <td>
-                                                                            <button class="btn btn-info btn-responsive" ng-click="viewDetails(item)" href="#fav-carousel" data-slide-to="1">
-                                                                                View Details
-                                                                            </button>
-                                                                        </td>
-                                                                </tr>
+                                                            <tr ng-repeat="item in fav_leg|orderBy: ['state_name','last_name']">
+                                                                <td>
+                                                                    <button ng-click="legDeleteItem(item)" class="btn btn-info btn-responsive btn-fav btn-del">
+                                                                        <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                                                                    </button>
+                                                                </td>
+                                                                <td><img class="leg-img" src="https://theunitedstates.io/images/congress/original/{{item.bioguide_id + '.jpg' }}">
+                                                                </td>
+                                                                <td><img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.party == 'R'?'r.png':'d.png'}}">
+                                                                </td>
+                                                                <td>{{ item.last_name + ', ' + item.first_name }}</td>
+                                                                <td><img class="leg-img-mem" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}">{{item.chamber.substring(0,1).toUpperCase()+item.chamber.substring(1)}}</td>
+                                                                <td>{{item.state_name}}</td>
+                                                                <td><a href="mailto:{{item.oc_email}}">{{item.oc_email}}</a></td>
+                                                                <td>
+                                                                    <button class="btn btn-info btn-responsive" ng-click="viewDetails(item)" href="#fav-carousel" data-slide-to="1">
+                                                                        View Details
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -984,37 +982,37 @@
                                                 <div id="fav-main-table" class="col-12 col-sm-12 col-lg-12 table-responsive">
                                                     <table class="table table-hover">
                                                         <thead>
-                                                          <tr>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1"></th>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1">Bill ID</th>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1">Bill Type</th>
-                                                                  <th class="col-sm-2 col-md-2 col-lg-2">Title</th>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1">Chamber</th>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1">Introducted On</th>
-                                                                  <th class="col-sm-2 col-md-2 col-lg-2">Sponsor</th>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1"></th>
-                                                          </tr>
+                                                            <tr>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1"></th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Bill ID</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Bill Type</th>
+                                                                <th class="col-sm-2 col-md-2 col-lg-2">Title</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Chamber</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Introducted On</th>
+                                                                <th class="col-sm-2 col-md-2 col-lg-2">Sponsor</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1"></th>
+                                                            </tr>
                                                         </thead>
                                                         <tbody>
                                                             <div>
                                                                 <tr ng-repeat="item in fav_bill|orderBy:'last_name'">
-                                                                        <td>
-                                                                            <button ng-click="billDeleteItem(item)" class="btn btn-info btn-responsive btn-fav btn-del">
-                                                                                <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </td>
-                                                                        <td>{{item.bill_id|uppercase}}</td>
-                                                                        <td>{{item.bill_type|uppercase}}</td>
-                                                                        <td>{{item.official_title}}</td>
-                                                                        <td><img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}"> {{item.chamber.substring(0,1).toUpperCase()+item.chamber.substring(1)}}
-                                                                        </td>
-                                                                        <td>{{item.introduced_on}}</td>
-                                                                        <td>{{ item.sponsor.title + ". " + item.sponsor.last_name + ', ' + item.sponsor.first_name }}</td>
-                                                                        <td>
-                                                                            <button class="btn btn-info btn-responsive" ng-click="viewDetailsBills(item)" href="#fav-carousel" data-slide-to="2">
-                                                                                View Details
-                                                                            </button>
-                                                                        </td>
+                                                                    <td>
+                                                                        <button ng-click="billDeleteItem(item)" class="btn btn-info btn-responsive btn-fav btn-del">
+                                                                            <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </td>
+                                                                    <td>{{item.bill_id|uppercase}}</td>
+                                                                    <td>{{item.bill_type|uppercase}}</td>
+                                                                    <td>{{item.official_title}}</td>
+                                                                    <td><img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}"> {{item.chamber.substring(0,1).toUpperCase()+item.chamber.substring(1)}}
+                                                                    </td>
+                                                                    <td>{{item.introduced_on}}</td>
+                                                                    <td>{{ item.sponsor.title + ". " + item.sponsor.last_name + ', ' + item.sponsor.first_name }}</td>
+                                                                    <td>
+                                                                        <button class="btn btn-info btn-responsive" ng-click="viewDetailsBills(item)" href="#fav-carousel" data-slide-to="2">
+                                                                            View Details
+                                                                        </button>
+                                                                    </td>
                                                                 </tr>
                                                             </div>
                                                         </tbody>
@@ -1034,29 +1032,29 @@
                                                 <div id="fav-main-table" class="col-12 col-sm-12 col-md-12 col-lg-12 table-responsive">
                                                     <table class="table table-hover">
                                                         <thead>
-                                                          <tr>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1"></th>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1">Chamber</th>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1">Committee ID</th>
-                                                                  <th class="col-sm-6 col-md-6 col-lg-6">Name</th>
-                                                                  <th class="col-sm-2 col-md-2 col-lg-2">Parent Committee</th>
-                                                                  <th class="col-sm-1 col-md-1 col-lg-1">Sub Committee</th>
-                                                          </tr>
+                                                            <tr>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1"></th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Chamber</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Committee ID</th>
+                                                                <th class="col-sm-6 col-md-6 col-lg-6">Name</th>
+                                                                <th class="col-sm-2 col-md-2 col-lg-2">Parent Committee</th>
+                                                                <th class="col-sm-1 col-md-1 col-lg-1">Sub Committee</th>
+                                                            </tr>
                                                         </thead>
                                                         <tbody>
                                                             <div>
                                                                 <tr ng-repeat="item in fav_comm|orderBy: 'committee_id'">
-                                                                        <td>
-                                                                            <button ng-click="commDeleteItem(item)" class="btn btn-info btn-responsive btn-fav btn-del">
-                                                                                <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
-                                                                            </button>
-                                                                        </td>
-                                                                        <td><img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}">
-                                                                        </td>
-                                                                        <td>{{ item.committee_id | uppercase }}</td>
-                                                                        <td>{{item.name}}</td>
-                                                                        <td>{{item.parent_committee_id|uppercase}}</td>
-                                                                        <td>{{item.subcommittee}}</td>
+                                                                    <td>
+                                                                        <button ng-click="commDeleteItem(item)" class="btn btn-info btn-responsive btn-fav btn-del">
+                                                                            <i class="fa fa-trash fa-lg" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </td>
+                                                                    <td><img class="leg-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{item.chamber == 'house'?'h.png':'s.svg'}}">
+                                                                    </td>
+                                                                    <td>{{ item.committee_id | uppercase }}</td>
+                                                                    <td>{{item.name}}</td>
+                                                                    <td>{{item.parent_committee_id|uppercase}}</td>
+                                                                    <td>{{item.subcommittee}}</td>
                                                                 </tr>
                                                             </div>
                                                         </tbody>
@@ -1071,8 +1069,8 @@
                                 <!-- /#Legislators View Details -->
                                 <div id="leg-view-details" class="item">
                                     <div id="leg-view-details-header" class="page-header">
-                                        <button  id="butn-back" class = "btn btn-default" href="#fav-carousel" data-slide-to="0">
-                                          <i class="fa fa-chevron-left"></i>
+                                        <button id="butn-back" class="btn btn-default" href="#fav-carousel" data-slide-to="0">
+                                            <i class="fa fa-chevron-left"></i>
                                         </button>
 
                                         <span id="details-label">Details</span>
@@ -1088,130 +1086,130 @@
                                     <div id="leg-view-details-content">
                                         <div class="col-md-6 col-lg-6 table-responsive">
                                             <table id="leg-vd-pd-content" class="table">
-                                              <tbody>
-                                                  <tr>
-                                                      <td rowspan="5"><img id="leg-vd-pd-img" src="https://theunitedstates.io/images/congress/original/{{viewDetailsRowData.bioguide_id + '.jpg'}}">
-                                                      </td>
-                                                      <td>{{ viewDetailsRowData.title + '. ' + viewDetailsRowData.last_name + ', ' + viewDetailsRowData.first_name }}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td><a href="mailto:{{ viewDetailsRowData.oc_email }}">{{ viewDetailsRowData.oc_email }}</a>
-                                                      </td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td>{{ 'Chamber: ' + viewDetailsRowData.chamber.substring(0,1).toUpperCase()+ viewDetailsRowData.chamber.substring(1) }}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td>Contact: <span class="phone-no">{{ viewDetailsRowData.phone }}</span>
-                                                      </td>
-                                                  </tr>
-                                                  <tr>
-                                                      <td><img class="leg-vd-party-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{ viewDetailsRowData.party === 'R'? 'r.png':'d.png'  }}">{{ viewDetailsRowData.party === 'R'? 'Republic':'Democrat' }}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th>Start Term</th>
-                                                      <td>{{ viewDetailsRowData.term_start| date: 'mediumDate' }}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th>End Term</th>
-                                                      <td>{{ viewDetailsRowData.term_end | date: 'mediumDate'}}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th>Term</th>
-                                                      <td>
-                                                          <div class="progress">
-                                                              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                                                                  70%
-                                                              </div>
-                                                          </div>
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="5"><img id="leg-vd-pd-img" src="https://theunitedstates.io/images/congress/original/{{viewDetailsRowData.bioguide_id + '.jpg'}}">
+                                                        </td>
+                                                        <td>{{ viewDetailsRowData.title + '. ' + viewDetailsRowData.last_name + ', ' + viewDetailsRowData.first_name }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="mailto:{{ viewDetailsRowData.oc_email }}">{{ viewDetailsRowData.oc_email }}</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>{{ 'Chamber: ' + viewDetailsRowData.chamber.substring(0,1).toUpperCase()+ viewDetailsRowData.chamber.substring(1) }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Contact: <span class="phone-no">{{ viewDetailsRowData.phone }}</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img class="leg-vd-party-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/{{ viewDetailsRowData.party === 'R'? 'r.png':'d.png'  }}">{{ viewDetailsRowData.party === 'R'? 'Republic':'Democrat' }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Start Term</th>
+                                                        <td>{{ viewDetailsRowData.term_start| date: 'mediumDate' }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>End Term</th>
+                                                        <td>{{ viewDetailsRowData.term_end | date: 'mediumDate'}}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Term</th>
+                                                        <td>
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                                                    70%
+                                                                </div>
+                                                            </div>
 
-                                                      </td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th>Office</th>
-                                                      <td>{{ viewDetailsRowData.office }}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th>State</th>
-                                                      <td>{{ viewDetailsRowData.state_name }}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th>Fax</th>
-                                                      <td class="phone-no">{{ viewDetailsRowData.fax }}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th>Birthday</th>
-                                                      <td>{{ viewDetailsRowData.birthday| date: 'mediumDate' }}</td>
-                                                  </tr>
-                                                  <tr>
-                                                      <th>Social Links</th>
-                                                      <td>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Office</th>
+                                                        <td>{{ viewDetailsRowData.office }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>State</th>
+                                                        <td>{{ viewDetailsRowData.state_name }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Fax</th>
+                                                        <td class="phone-no">{{ viewDetailsRowData.fax }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Birthday</th>
+                                                        <td>{{ viewDetailsRowData.birthday| date: 'mediumDate' }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Social Links</th>
+                                                        <td>
 
-                                                          <a ng-if="!isNullString(viewDetailsRowData.twitter_id)" href="https://twitter.com/{{viewDetailsRowData.twitter_id}}" target="_blank"><img class="leg-vd-social-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/t.png">
-                                                          </a>
-                                                          <a ng-if="!isNullString(viewDetailsRowData.facebook_id)" href="https://www.facebook.com/{{viewDetailsRowData.facebook_id}}" target="_blank"><img class="leg-vd-social-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/f.png">
-                                                          </a>
-                                                          <a ng-if="!isNullString(viewDetailsRowData.website)" href="{{viewDetailsRowData.website}}" target="_blank"><img class="leg-vd-social-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/w.png">
-                                                          </a>
-                                                      </td>
-                                                  </tr>
-                                              </tbody>
+                                                            <a ng-if="!isNullString(viewDetailsRowData.twitter_id)" href="https://twitter.com/{{viewDetailsRowData.twitter_id}}" target="_blank"><img class="leg-vd-social-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/t.png">
+                                                            </a>
+                                                            <a ng-if="!isNullString(viewDetailsRowData.facebook_id)" href="https://www.facebook.com/{{viewDetailsRowData.facebook_id}}" target="_blank"><img class="leg-vd-social-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/f.png">
+                                                            </a>
+                                                            <a ng-if="!isNullString(viewDetailsRowData.website)" href="{{viewDetailsRowData.website}}" target="_blank"><img class="leg-vd-social-img" src="http://cs-server.usc.edu:45678/hw/hw8/images/w.png">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
                                             </table>
                                         </div>
                                         <div class="col-md-6 col-lg-6">
-                                          <div class="row">
-                                              <div class="col-md-12 col-lg-12 table-responsive">
-                                                  <table id="leg-vd-comm-content" class="table">
-                                                      <caption class="h4">Committees</caption>
-                                                      <thead>
-                                                          <tr>
-                                                              <th>Chamber</th>
-                                                              <th>Committee ID</th>
-                                                              <th>Name</th>
-                                                          </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                          <tr ng-repeat="item_leg_vd in leg_committees_resultData|limitTo: limitCommitteeData">
-                                                              <td>{{item_leg_vd.chamber.substring(0,1).toUpperCase()+ item_leg_vd.chamber.substring(1)}}</td>
-                                                              <td>
-                                                                  {{item_leg_vd.committee_id}}
-                                                              </td>
-                                                              <td>
-                                                                  {{item_leg_vd.name}}
-                                                              </td>
-                                                          </tr>
-                                                      </tbody>
-                                                  </table>
-                                              </div>
-                                          </div>
-                                          <div class="row">
-                                              <div class="col-md-12 col-lg-12 table-responsive">
-                                                  <table id="leg-vd-bill-content" class="table">
-                                                      <caption class="h4">Bills</caption>
-                                                      <thead>
-                                                          <tr>
-                                                              <th class="col-md-1 col-lg-1">Bill ID</th>
-                                                              <th class="col-md-3 col-lg-3">Title</th>
-                                                              <th class="col-md-2 col-lg-2">Chamber</th>
-                                                              <th class="col-md-1 col-lg-1">Bill Type</th>
-                                                              <th class="col-md-2 col-lg-2">Congress</th>
-                                                              <th class="col-md-2 col-lg-2">Link</th>
-                                                          </tr>
-                                                      </thead>
-                                                      <tbody>
-                                                          <tr ng-repeat="item_leg_vd_bill_content in leg_bills_resultData|limitTo: limitCommitteeData">
-                                                              <td>{{item_leg_vd_bill_content.bill_id|uppercase}}</td>
-                                                              <td>{{item_leg_vd_bill_content.official_title}}</td>
-                                                              <td>{{item_leg_vd_bill_content.chamber}}</td>
-                                                              <td>{{item_leg_vd_bill_content.bill_type}}</td>
-                                                              <td>{{item_leg_vd_bill_content.congress}}</td>
-                                                              <td><a href="{{item_leg_vd_bill_content.last_version.urls.pdf}}" target="_blank">Link</a>
-                                                              </td>
-                                                          </tr>
-                                                      </tbody>
-                                                  </table>
-                                              </div>
-                                          </div>
+                                            <div class="row">
+                                                <div class="col-md-12 col-lg-12 table-responsive">
+                                                    <table id="leg-vd-comm-content" class="table">
+                                                        <caption class="h4">Committees</caption>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Chamber</th>
+                                                                <th>Committee ID</th>
+                                                                <th>Name</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr ng-repeat="item_leg_vd in leg_committees_resultData|limitTo: limitCommitteeData">
+                                                                <td>{{item_leg_vd.chamber.substring(0,1).toUpperCase()+ item_leg_vd.chamber.substring(1)}}</td>
+                                                                <td>
+                                                                    {{item_leg_vd.committee_id}}
+                                                                </td>
+                                                                <td>
+                                                                    {{item_leg_vd.name}}
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12 col-lg-12 table-responsive">
+                                                    <table id="leg-vd-bill-content" class="table">
+                                                        <caption class="h4">Bills</caption>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="col-md-1 col-lg-1">Bill ID</th>
+                                                                <th class="col-md-3 col-lg-3">Title</th>
+                                                                <th class="col-md-2 col-lg-2">Chamber</th>
+                                                                <th class="col-md-1 col-lg-1">Bill Type</th>
+                                                                <th class="col-md-2 col-lg-2">Congress</th>
+                                                                <th class="col-md-2 col-lg-2">Link</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr ng-repeat="item_leg_vd_bill_content in leg_bills_resultData|limitTo: limitCommitteeData">
+                                                                <td>{{item_leg_vd_bill_content.bill_id|uppercase}}</td>
+                                                                <td>{{item_leg_vd_bill_content.official_title}}</td>
+                                                                <td>{{item_leg_vd_bill_content.chamber}}</td>
+                                                                <td>{{item_leg_vd_bill_content.bill_type}}</td>
+                                                                <td>{{item_leg_vd_bill_content.congress}}</td>
+                                                                <td><a href="{{item_leg_vd_bill_content.last_version.urls.pdf}}" target="_blank">Link</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- /#View Details Content -->
@@ -1238,15 +1236,15 @@
                                     <!-- /#Bill View Details Content -->
                                     <div id="bill-view-details-content">
                                         <div id="bill-vd-content" class="col-sm-6 col-md-6 col-lg-6 table-responsive">
-                                            <table  class="table" height="500px">
+                                            <table class="table" height="500px">
                                                 <tbody>
                                                     <tr>
-                                                        <th class="col-md-1 col-lg-1" >{{ 'Bill ID '}}</th>
+                                                        <th class="col-md-1 col-lg-1">{{ 'Bill ID '}}</th>
                                                         <td class="col-md-5 col-lg-5">{{ viewDetailsBillRowData.bill_id| uppercase }}</td>
                                                     </tr>
                                                     <tr>
-                                                      <th class="col-md-1 col-lg-1">{{ 'Title '}}</th>
-                                                      <td class="col-md-5 col-lg-5">{{ viewDetailsBillRowData.official_title }}</td>
+                                                        <th class="col-md-1 col-lg-1">{{ 'Title '}}</th>
+                                                        <td class="col-md-5 col-lg-5">{{ viewDetailsBillRowData.official_title }}</td>
                                                     </tr>
                                                     <tr>
                                                         <th class="col-md-1 col-lg-1">{{ 'Bill Type '}}</th>
@@ -1286,7 +1284,7 @@
                                                 </tbody>
                                             </table>
                                         </div>
-                                        <div class="col-md-6 col-lg-6" id = "bill-vd-pdf">
+                                        <div class="col-md-6 col-lg-6" id="bill-vd-pdf">
                                             <object width="100%" height="500px" data="{{viewDetailsBillRowData.last_version.urls.pdf}} "></object>
                                         </div>
                                     </div>
